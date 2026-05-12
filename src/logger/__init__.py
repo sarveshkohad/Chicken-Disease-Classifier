@@ -1,5 +1,5 @@
-import os
 import logging
+import os
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
 
@@ -33,7 +33,7 @@ def configure_logger():
 
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(formatter)
-    console_handler.setLevel(logging.INFO)
+    console_handler.setLevel(logging.DEBUG)
 
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)

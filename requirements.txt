@@ -13,6 +13,7 @@ joblib
 types-PyYAML
 scipy
 Flask
-Flask-core
+Flask-Cors
+py7zr
 
 -e .
