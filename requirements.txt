@@ -12,6 +12,7 @@ ensure==1.0.2
 joblib
 types-PyYAML
 scipy
+tensorflow
 Flask
 Flask-Cors
 py7zr
