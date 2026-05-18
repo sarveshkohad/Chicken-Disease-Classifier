@@ -23,4 +23,4 @@ class PrepareBaseModelConfig:
 class PrepareCallbacksConfig:
     root_dir: Path
     tensorboard_root_log_dir: Path
-    checkpoint_model_filepath: Path
+    checkpoint_model_filepath: str
