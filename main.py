@@ -3,7 +3,7 @@ from src.logger import logging
 from src.exception import MyException
 import sys
 from src.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
-
+from src.pipeline.stage_03_training import ModelTrainingPipeline
 
 STAGE_NAME= "Data Ingestion stage"
 
@@ -24,6 +24,17 @@ try:
         logging.info(f"********************")
         logging.info(f">>>>>>>{STAGE_NAME} started<<<<<<<<<<")
         obj = PrepareBaseModelTrainingPipeline()
+        obj.main()
+        logging.info(f">>>>>>>>>{STAGE_NAME} completed<<<<<<<<<<<<<<<<")
+except Exception as e:
+        raise MyException(e, sys)
+
+STAGE_NAME = "Training"
+
+try:
+        logging.info(f"********************")
+        logging.info(f">>>>>>>{STAGE_NAME} started<<<<<<<<<<")
+        obj = ModelTrainingPipeline()
         obj.main()
         logging.info(f">>>>>>>>>{STAGE_NAME} completed<<<<<<<<<<<<<<<<")
 except Exception as e:
