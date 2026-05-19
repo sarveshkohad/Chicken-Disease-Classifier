@@ -4,6 +4,9 @@ import yaml
 from src.exception import MyException
 from src.logger import logging
 from box import ConfigBox
+import json
+from pathlib import Path
+
 
 def read_yaml(file_path:str):
     try:
@@ -15,3 +18,16 @@ def read_yaml(file_path:str):
 def create_directories(path_to_directories:list):
     for path in path_to_directories:
         os.makedirs(path, exist_ok=True)
+
+
+def save_json(path: Path, data: dict):
+    """save json data
+
+    Args:
+        path (Path): path to json file
+        data (dict): data to be saved in json file
+    """
+    with open(path, "w") as f:
+        json.dump(data, f, indent=4)
+
+    logging.info(f"json file saved at: {path}")
