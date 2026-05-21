@@ -17,4 +17,3 @@ Flask
 Flask-Cors
 py7zr
 
--e .
