@@ -6,6 +6,7 @@ from src.logger import logging
 from box import ConfigBox
 import json
 from pathlib import Path
+import base64
 
 
 def read_yaml(file_path:str):
@@ -31,3 +32,9 @@ def save_json(path: Path, data: dict):
         json.dump(data, f, indent=4)
 
     logging.info(f"json file saved at: {path}")
+
+def decodeImage(imgstring, fileName):
+    imgdata = base64.b64decode(imgstring)
+    with open(fileName, 'wb') as f:
+        f.write(imgdata)
+        f.close()
