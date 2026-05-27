@@ -5,6 +5,7 @@ RUN apt update -y && apt install awscli -y gcc python3-dev build-essential
 WORKDIR /app
 
 COPY . /app
+
 RUN pip install -r requirements.txt
 
 CMD ["python3", "app.py"]
