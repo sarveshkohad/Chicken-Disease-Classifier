@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-RUN apt update -y && apt install awscli -y
+RUN apt update -y && apt install awscli -y gcc python3-dev build-essential
 
 WORKDIR /app
 
