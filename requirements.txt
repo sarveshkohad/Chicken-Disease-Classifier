@@ -1,6 +1,5 @@
 tensorflow
 pandas
-dvc
 notebook
 numpy
 matplotlib
