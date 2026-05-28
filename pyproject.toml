@@ -3,7 +3,7 @@ name = "mlops-pipeline"
 version  = "0.0.1"
 description = "Production grade MLOps pipeline for CNN Classification"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 authors = [
     {name="Sarvesh Kohad"}
 ]
